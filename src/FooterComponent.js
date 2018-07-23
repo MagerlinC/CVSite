@@ -6,6 +6,7 @@
 import React, { Component } from 'react';
 import LinkedIn from "./assets/linkedin-button.svg";
 import Facebook from './assets/facebook-logo-button.svg';
+import Github from './assets/github-logo.svg';
 import './App.css';
 
 class FooterComponent extends Component {
@@ -23,8 +24,8 @@ class FooterComponent extends Component {
                         <a href="https://www.linkedin.com/in/mikkel-agerlin-christensen-3a38ba166/">
                             <img src={LinkedIn} className="social-logo"/>
                         </a>
-                        <a href="https://www.facebook.com/MACMikkel">
-                            <img src={Facebook} className="social-logo"/>
+                        <a href="https://github.com/MagerlinC">
+                            <img src={Github} className="social-logo"/>
                         </a>
                         <a href="https://www.facebook.com/MACMikkel">
                             <img src={Facebook} className="social-logo"/>

@@ -13,6 +13,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <HeaderComponent img={MikkelHead} name="Mikkel Agerlin Christensen"/>
                 <Router>
                     <div id="root">

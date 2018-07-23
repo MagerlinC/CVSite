@@ -4,6 +4,7 @@ import PhoneIcon from './assets/phone-call.svg';
 import MailIcon from './assets/email.svg';
 import TextareaAutosize from 'react-autosize-textarea';
 import './App.css';
+import ColorHeader from "./ColorHeader";
 
 class ContactComponent extends Component {
     constructor(props) {
@@ -34,7 +35,7 @@ class ContactComponent extends Component {
     render() {
         return (
             <div className="contact-component">
-                <h1>Contact Me</h1>
+                <ColorHeader title="Contact Me!"/>
                 <div className="contact-grid">
                     <div className="mail">
                         <form onSubmit={this.handleSubmit} className="mail-section">
@@ -63,7 +64,6 @@ class ContactComponent extends Component {
                                Smyrnavej 13b, 1tv, 2300 København S, Denmark
                             </p>
                         </div>
-                        <div className="spacer-bar"/>
                     </div>
                 </div>
                 <div className="contact-bottom-spacer"></div>
