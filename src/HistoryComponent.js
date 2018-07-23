@@ -6,7 +6,7 @@ class HistoryComponent extends Component {
     render() {
         return (
             <div className="history-component">
-                <ColorHeader title="History"/>
+                <ColorHeader title="HISTORY"/>
                 <h1>History works!</h1>
             </div>
         );

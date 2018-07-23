@@ -35,7 +35,7 @@ class ContactComponent extends Component {
     render() {
         return (
             <div className="contact-component">
-                <ColorHeader title="Contact Me!"/>
+                <ColorHeader title="CONTACT"/>
                 <div className="contact-grid">
                     <div className="mail">
                         <form onSubmit={this.handleSubmit} className="mail-section">
@@ -66,7 +66,6 @@ class ContactComponent extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="contact-bottom-spacer"></div>
             </div>
         );
     }

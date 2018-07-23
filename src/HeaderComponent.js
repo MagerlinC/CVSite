@@ -23,10 +23,10 @@ class HeaderComponent extends Component {
                     </a>
                 </div>
                     <Menu right>
-                        <a id="home" className="menu-item" href="/"><p className="menu-item">Home</p></a>
-                        <a id="projects" className="menu-item" href="/projects"><p className="menu-item">Projects</p></a>
-                        <a id="history" className="menu-item" href="/history"><p className="menu-item">Work & Education History</p></a>
-                        <a id="contact" className="menu-item" href="/contact"><p className="menu-item">Contact</p></a>
+                        <a id="home" className="menu-item" href="/"><p className="menu-item"><span>Home</span></p></a>
+                        <a id="projects" className="menu-item" href="/projects"><p className="menu-item">PROJECTS</p></a>
+                        <a id="history" className="menu-item" href="/history"><p className="menu-item">WORK & EDUCATION</p></a>
+                        <a id="contact" className="menu-item" href="/contact"><p className="menu-item">CONTACT</p></a>
                     </Menu>
             </div>
         );

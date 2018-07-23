@@ -9,8 +9,18 @@ $box_shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-family: LabelFont;
   src:url("./assets/ImpactLabelReversed.ttf");
 }
+
+@font-face {
+  font-family: Oswald;
+  src:url("https://fonts.googleapis.com/css?family=Oswald");
+}
+
 .App {
   text-align: center;
+}
+
+#root {
+  min-height: 85vh;
 }
 
 .active { background-color: #fff}
@@ -32,6 +42,7 @@ html, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
+  font-family: Oswald;
   background: transparent;
 }
 
@@ -115,14 +126,17 @@ a:hover, .navBtn:active { text-decoration: none; color:#000; }
 // Footer Styling
 
 .footer-component {
-  margin: 0%;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
   width: 100%;
-  max-height: 15vh;
+  max-height: 17vh;
+  min-height: 17vh;
   background-color: $accent_color;
 }
 
 .person-info {
   padding: 2%;
+  margin-bottom: 0 !important;
   display: grid;
   grid-template-columns: 1fr;
   text-align: left;
@@ -133,6 +147,8 @@ a:hover, .navBtn:active { text-decoration: none; color:#000; }
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .social-section {
@@ -180,7 +196,7 @@ a:hover, .navBtn:active { text-decoration: none; color:#000; }
 }
 
 .info-item {
-  padding: 0.2vh;
+  padding: 0.1vh;
   margin: 0px;
 }
 
@@ -228,12 +244,6 @@ a
   color: #111b47;
 }
 
-a:hover
-{
-  border-bottom: 1px dashed #ED971F;
-  color: #ED971F;
-}
-
 /**** slider ****/
 
 #slider, ul
@@ -271,7 +281,6 @@ a:hover
   -o-transition: left .3s linear;
   -webkit-transition: left .3s linear;
   margin-left: -25px;
-  font-family: century gothic;
   color: #666;
 }
 
@@ -343,7 +352,7 @@ a:hover
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.8);
 }
 
 /* Position and sizing of clickable cross button */
@@ -359,7 +368,7 @@ a:hover
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: rgba(49,55,55,0.7);
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -390,6 +399,73 @@ a:hover
   color: white;
 }
 
+.menu-item {
+  font-family: 'Oswald', sans-serif;
+  font-weight:500;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:white;
+  margin:0 15px;
+  font-size:16px;
+  letter-spacing:1px;
+  position:relative;
+  display:inline-block;
+}
+// Menu Item Strikethrough on hover
+.menu-item:before{
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background:white;
+  top:47%;
+  animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+.menu-item:hover:before{
+  animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+
+}
+@keyframes in{
+  0%{
+    width: 0;
+    left:0;
+    right:auto;
+  }
+  100%{
+    left:0;
+    right:auto;
+    width: 100%;
+  }
+}
+@keyframes out{
+  0%{
+    width:100%;
+    left: auto;
+    right: 0;
+  }
+  100%{
+    width: 0;
+    left: auto;
+    right: 0;
+  }
+}
+@keyframes show{
+  0%{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@for $i from 1 through 5 {
+  .menu-item:nth-child(#{$i}){
+    animation:show .2s #{$i*0.1+1}s ease 1 both;
+  }
+}
+
 .shader-overlay {
   background: rgba(35,35,35,0.5);
   -webkit-background-size: cover;
@@ -407,21 +483,22 @@ a:hover
 .landing-page-text {
   padding: 1%;
   opacity: 0.9;
-  font-family: LabelFont;
+
   background-color: transparent;
   position: relative;
   text-align: center;
   color: white;
-
 }
 
 .landing-page-text-header {
+  font-family: LabelFont;
   font-size: 2em;
 }
 
 .landing-page-text-subtitle {
   text-align: right !important;
   font-size: 1.2em;
+  font-family: LabelFont;
 }
 
 .mikkel-logo {
@@ -468,17 +545,16 @@ a:hover
 // Contact Page Styling
 
 .contact-component {
-  height: 87vh;
-  min-height: 87vh;
 }
 
 .contact-grid {
+  margin-top: 6vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .contact-section {
-  padding: 5%;
+  padding: 10% 5% 5% 5%;
   justify-self: center;
   width: 80%;
 }
@@ -548,7 +624,7 @@ a:hover
 }
 
 .color-header {
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -560,6 +636,7 @@ a:hover
 }
 
 .color-header-title {
+  font-family: Oswald;
   font-size: 3em;
 }
 
@@ -568,7 +645,7 @@ a:hover
 }
 
 .card-overlay-button {
-  max-width: 15%;
+  max-width: 13%;
   color: white;
   font-size: 1.2em;
   display: grid;
@@ -580,9 +657,8 @@ a:hover
   transition: visibility 0s, opacity 0.5s linear;
   justify-items: center;
   align-items: right;
-  padding: 1%;
   position: absolute;
-  bottom: 6.5%;
+  bottom: 4%;
   right: 0%;
 }
 

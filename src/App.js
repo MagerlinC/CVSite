@@ -14,6 +14,7 @@ class App extends Component {
         return (
             <div className="App">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"/>
                 <HeaderComponent img={MikkelHead} name="Mikkel Agerlin Christensen"/>
                 <Router>
                     <div id="root">
@@ -24,7 +25,6 @@ class App extends Component {
                     </div>
                 </Router>
                 <FooterComponent/>
-
             </div>
         );
     }
