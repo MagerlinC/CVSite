@@ -164,6 +164,7 @@ a:hover, .navBtn:active {
   font-size: 1em; }
 
 .card-component {
+  position: relative;
   align-self: start;
   margin: 2vh 1vw 1vh 1vw;
   color: white;
@@ -544,6 +545,9 @@ a {
 .hero-img-text {
   color: rgba(0, 0, 0, 0.5); }
 
+.contact-text {
+  align-self: center; }
+
 .contact-grid {
   margin-top: 6vh;
   display: grid;
@@ -617,18 +621,16 @@ a {
   align-items: center;
   background-color: #323131;
   width: 100%;
-  min-height: 12vh;
+  min-height: 15vh;
   color: white; }
 
 .color-header-title {
   font-family: Oswald;
   font-size: 3em; }
 
-.card-and-overlay {
-  position: relative; }
-
 .card-overlay-button {
-  max-width: 13%;
+  position: absolute;
+  max-width: 6%;
   color: white;
   font-size: 1.2em;
   display: grid;
@@ -640,14 +642,13 @@ a {
   transition: visibility 0s, opacity 0.5s linear;
   justify-items: center;
   align-items: right;
-  position: absolute;
-  bottom: 4%;
-  right: 0%; }
+  bottom: 1%;
+  right: 0.5%; }
 
-.card-and-overlay:hover .card-overlay-button {
+.card-component:hover .card-overlay-button {
   visibility: visible;
   opacity: 1; }
 
 .overlay-button-icon {
-  max-width: 40%;
+  max-width: 90%;
   opacity: 0.8; }

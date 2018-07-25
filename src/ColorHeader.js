@@ -3,11 +3,6 @@ import './App.css';
 
 class ColorHeader extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
-
     render() {
         return (
             <div className="color-header">

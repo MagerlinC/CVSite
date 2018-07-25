@@ -16,7 +16,14 @@ class ProjectsComponent extends Component {
     ];
 
     projectTwo = [
-        "Rambøll Denmark "
+        "Rambøll Denmark uses Virtual Reality to showcase architecture, buildings and the building process for clients and engineers. Piloting the virtual reality equipment requires training, tbhat Rambøll had written guides on.",
+        "These guides were originally stored in a Sharepoint solution, but it was quickly discovered that access to the guides was needed by visitors and guests, without the need for logging in to internal services.",
+        "For this reason, I built an online, open and Web-based solution in Angular, exposing their guides and providing a platform for sharing and uploading of future guides for VR equipment." +
+        "The code for this project can be found on my Github."
+    ];
+
+    projectThree = [
+        "Digitalizing Knowledge Sharing in Rambøll Denmark"
     ];
 
     render() {
@@ -24,38 +31,26 @@ class ProjectsComponent extends Component {
             <div className="projects-component">
                 <ColorHeader title="PROJECTS"/>
                 <div className="projects-grid">
-                    <div className="card-and-overlay">
-                        <CardComponent title="Thesis: Using Data Visualizations in Agile Planning" contents={this.projectOne}/>
-                        <div className="card-overlay-button">
-                            <a href={Thesis} download="thesis.pdf">
-                                <img src={DownloadIcon} className="overlay-button-icon"/>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="card-and-overlay">
-                        <CardComponent title="Giving Virtual Solutions Lab Users Access to Guides on the fly in Rambøll - Frontend" contents={this.projectTwo}/>
-                        <div className="card-overlay-button">
-                            <a href='https://github.com/MagerlinC/VSLGuides'>
-                                <img src={GithubLogo} className="overlay-button-icon"/>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="card-and-overlay">
-                        <CardComponent title="Second Title" contents={this.projectOne}/>
-                        <div className="card-overlay-button">
-                            <a href='https://github.com/MagerlinC/VSL-Web-API'>
-                                <img src={GithubLogo} className="overlay-button-icon"/>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="card-and-overlay">
-                        <CardComponent title="Thesis: Using Data Visualizations in Agile Planning" contents={this.projectOne}/>
-                        <div className="card-overlay-button">
-                            <a href={Thesis} download="thesis.pdf">
-                                <img src={DownloadIcon} className="overlay-button-icon"/>
-                            </a>
-                        </div>
-                    </div>
+                        <CardComponent title="Thesis: Using Data Visualizations in Agile Planning"
+                                       contents={this.projectOne}
+                                       link={Thesis}
+                                       logo={DownloadIcon}
+                        />
+                        <CardComponent title="Giving Virtual Solutions Lab Users Access to Guides on the fly in Rambøll - Frontend"
+                                       contents={this.projectTwo}
+                                       link='https://github.com/MagerlinC/VSLGuides'
+                                       logo={GithubLogo}
+                        />
+                        <CardComponent title="Second Title"
+                                       contents={this.projectThree}
+                                       link="https://github.com/MagerlinC/VSL-Web-API'"
+                                       logo={GithubLogo}
+                        />
+                        <CardComponent title="Thesis: Using Data Visualizations in Agile Planning"
+                                       contents={this.projectOne}
+                                       link={Thesis}
+                                       logo={DownloadIcon}
+                        />
                 </div>
             </div>
         );

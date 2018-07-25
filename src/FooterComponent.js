@@ -23,13 +23,13 @@ class FooterComponent extends Component {
                     </div>
                     <div className="social-section">
                         <a href="https://www.linkedin.com/in/mikkel-agerlin-christensen-3a38ba166/">
-                            <img src={LinkedIn} className="social-logo"/>
+                            <img src={LinkedIn} className="social-logo" alt="LinkedIn"/>
                         </a>
                         <a href="https://github.com/MagerlinC">
-                            <img src={Github} className="social-logo"/>
+                            <img src={Github} className="social-logo" alt="Github"/>
                         </a>
                         <a href={CV} download={'CV - Mikkel Agerlin.pdf'}>
-                            <img src={DownloadCV} className="social-logo"/>
+                            <img src={DownloadCV} className="social-logo" alt="CV"/>
                         </a>
                     </div>
                 </div>
