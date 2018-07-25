@@ -10,7 +10,7 @@
   text-align: center; }
 
 #root {
-  min-height: 85vh; }
+  min-height: 87vh; }
 
 .active {
   background-color: #fff; }
@@ -31,7 +31,6 @@ html, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
-  font-family: Oswald;
   background: transparent; }
 
 .menu-bar {
@@ -119,8 +118,8 @@ a:hover, .navBtn:active {
   padding-bottom: 0 !important;
   margin-bottom: 0 !important;
   width: 100%;
-  max-height: 17vh;
-  min-height: 17vh;
+  max-height: 15vh;
+  min-height: 13vh;
   background-color: #323131; }
 
 .person-info {
@@ -148,8 +147,8 @@ a:hover, .navBtn:active {
   max-width: 25%; }
 
 .card-title {
-  padding: 2%;
-  margin: 0px;
+  padding: 2% 2% 0 2%;
+  margin: 0;
   text-align: left;
   font-size: 1.2em; }
 
@@ -166,7 +165,7 @@ a:hover, .navBtn:active {
 
 .card-component {
   align-self: start;
-  margin: 4vh 1vw 2vh 1vw;
+  margin: 2vh 1vw 1vh 1vw;
   color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: rgba(3, 169, 244, 0.8);
@@ -195,10 +194,64 @@ a:hover, .navBtn:active {
 
 .landing-page-role-text {
   font-family: LabelFont;
+  text-align: left;
   color: white;
   font-size: 1.2em;
-  margin: 0;
+  margin: 0 0 0 5% !important;
   padding: 0; }
+
+.scroll-down-section {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.scroll-logo {
+  opacity: 0.7;
+  max-width: 13%; }
+
+#breathing-logo {
+  width: 270px;
+  padding: 20px;
+  margin: 50px auto;
+  -webkit-animation: breathing 4s ease-out infinite normal;
+  animation: breathing 4s ease-out infinite normal;
+  font-size: 24px;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  text-align: center; }
+
+@-webkit-keyframes breathing {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  30% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5); }
+  60% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  30% {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5); }
+  60% {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2); }
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); } }
 
 .text-and-scrolling-text {
   display: grid;
@@ -207,6 +260,14 @@ a:hover, .navBtn:active {
 a {
   text-decoration: none;
   color: #111b47; }
+
+.animation-show {
+  transition: all 0.75s ease;
+  opacity: 1; }
+
+.animation-hide {
+  opacity: 0;
+  pointer-events: none; }
 
 /**** slider ****/
 #slider, ul {
@@ -241,9 +302,8 @@ a {
 
 /*** Content ***/
 .slider-container {
-  margin: 0 auto !important;
+  margin: 0 !important;
   padding: 0;
-  width: 550px;
   min-height: 180px; }
 
 .slider-container p {
@@ -434,6 +494,7 @@ a {
   opacity: 0.9;
   background-color: transparent;
   position: relative;
+  width: 90%;
   text-align: center;
   color: white; }
 
@@ -465,7 +526,11 @@ a {
   height: 100vh; }
 
 .card-grid {
+  max-height: 100vh;
+  min-height: 100vh;
   display: grid;
+  align-items: center;
+  justify-items: center;
   grid-template-columns: 1fr 1fr; }
 
 .card-inner-grid {
@@ -536,6 +601,10 @@ a {
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr; }
+
+.double-card-grid {
+  display: grid;
+  grid-template-columns: 1fr; }
 
 .spacer {
   min-height: 13vh; }

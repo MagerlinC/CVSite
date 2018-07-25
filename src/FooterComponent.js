@@ -5,8 +5,9 @@
 
 import React, { Component } from 'react';
 import LinkedIn from "./assets/linkedin-button.svg";
-import Facebook from './assets/facebook-logo-button.svg';
+import DownloadCV from './assets/DownloadCV.svg';
 import Github from './assets/github-logo.svg';
+import CV from './assets/CV - Mikkel Agerlin.pdf';
 import './App.css';
 
 class FooterComponent extends Component {
@@ -27,8 +28,8 @@ class FooterComponent extends Component {
                         <a href="https://github.com/MagerlinC">
                             <img src={Github} className="social-logo"/>
                         </a>
-                        <a href="https://www.facebook.com/MACMikkel">
-                            <img src={Facebook} className="social-logo"/>
+                        <a href={CV} download={'CV - Mikkel Agerlin.pdf'}>
+                            <img src={DownloadCV} className="social-logo"/>
                         </a>
                     </div>
                 </div>
