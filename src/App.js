@@ -5,9 +5,9 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import HeaderComponent from "./HeaderComponent";
 import ProjectsComponent from "./ProjectsComponent";
 import LandingPageComponent from "./LandingPageComponent";
-import HistoryComponent from "./HistoryComponent";
 import ContactComponent from "./ContactComponent";
 import FooterComponent from "./FooterComponent";
+import NotFoundComponent from "./NotFoundComponent";
 
 class App extends Component {
 
@@ -19,7 +19,6 @@ class App extends Component {
                     <div id="root">
                         <Route exact path="" component={LandingPageComponent} />
                         <Route path="/projects" component={ProjectsComponent}/>
-                        <Route path="/history" component={HistoryComponent}/>
                         <Route path="/contact" component={ContactComponent}/>
                     </div>
                 </Router>

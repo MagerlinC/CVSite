@@ -173,6 +173,15 @@ a:hover, .navBtn:active {
   display: grid;
   grid-template-columns: 1fr; }
 
+.empty-card-component {
+  min-height: 10vh;
+  position: relative;
+  align-self: start;
+  margin: 2vh 1vw 1vh 1vw;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr; }
+
 .info-item {
   padding: 0.1vh;
   margin: 0px; }
@@ -227,8 +236,8 @@ a:hover, .navBtn:active {
     -webkit-transform: scale(1);
     transform: scale(1); }
   30% {
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5); }
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4); }
   60% {
     -webkit-transform: scale(1.2);
     transform: scale(1.2); }
@@ -242,9 +251,9 @@ a:hover, .navBtn:active {
     -ms-transform: scale(1);
     transform: scale(1); }
   30% {
-    -webkit-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    transform: scale(1.5); }
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4); }
   60% {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
@@ -265,10 +274,6 @@ a {
 .animation-show {
   transition: all 0.75s ease;
   opacity: 1; }
-
-.animation-hide {
-  opacity: 0;
-  pointer-events: none; }
 
 /**** slider ****/
 #slider, ul {
@@ -362,6 +367,92 @@ a {
 #slider ul:hover {
   -moz-animation-play-state: paused;
   -webkit-animation-play-state: paused; }
+
+.history-component {
+  background-color: white;
+  min-height: 100vh;
+  max-height: 100vh; }
+
+.job-and-education-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.25fr 1fr; }
+
+.timeline {
+  background: url("./assets/Timeline Arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; }
+
+.education .history-card-component {
+  margin-right: 1% !important; }
+
+.job .history-card-component {
+  margin-left: 1% !important; }
+
+.history-card-component {
+  margin: 2% 10% 2% 10%;
+  position: relative;
+  align-self: start;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgba(3, 169, 244, 0.8);
+  display: grid;
+  grid-template-columns: 1fr; }
+
+.history-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+.history-card-title {
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: #F0625D; }
+
+.history-card-content {
+  padding: 2%;
+  background-color: white;
+  color: black; }
+
+.history-card-left {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1fr; }
+
+.history-card-icon {
+  padding: 2%;
+  width: 30%; }
+
+.history-card-right {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center; }
+
+.job {
+  margin-top: 8%; }
+
+.education {
+  margin-top: 8%;
+  align-items: right; }
+
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 1s ease forwards; }
+
+.come-in:nth-child(odd) {
+  animation-duration: 0.6s;
+  /* So they look staggered */ }
+
+@keyframes come-in {
+  to {
+    transform: translateY(0); } }
+
+.animation-hide {
+  opacity: 0;
+  pointer-events: none; }
 
 /* Position and sizing of burger button */
 .bm-burger-button {
@@ -526,7 +617,8 @@ a {
   width: 100vw;
   height: 100vh; }
 
-.card-grid {
+.cv-card-grid {
+  background-color: rgba(245, 245, 245, 0.8);
   max-height: 100vh;
   min-height: 100vh;
   display: grid;

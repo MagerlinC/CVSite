@@ -11,6 +11,7 @@
     "react-burger-menu": "^2.5.2",
     "react-dom": "^16.4.1",
     "react-material-components-web": "^0.1.18",
+    "react-on-screen": "^2.0.4",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",

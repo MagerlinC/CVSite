@@ -6,6 +6,7 @@ import CardComponent from "./CardComponent";
 import Waypoint from 'react-waypoint';
 import ListCardComponent from "./ListCardComponent";
 import ScrollableAnchor from 'react-scrollable-anchor';
+import HistoryComponent from "./HistoryComponent";
 
 class LandingPageComponent extends Component {
 
@@ -31,13 +32,11 @@ class LandingPageComponent extends Component {
         this.setState({
             shouldAnimate: true
         });
-        console.log('Entered!');
     }
     _handleWaypointLeave() {
         this.setState({
             shouldAnimate: false
         });
-        console.log('Left!');
     }
 
     render() {
@@ -54,10 +53,6 @@ class LandingPageComponent extends Component {
                         <div className="landing-page-contents">
                             <div className="landing-page-text">
                                 <p className="landing-page-text-header">Mikkel Agerlin</p>
-                                <Waypoint
-                                    onEnter={this._handleWaypointEnter}
-                                    onLeave={this._handleWaypointLeave}
-                                />
                                 <div className="text-and-scrolling-text">
                                     <div className="slider-container">
                                         <p className="landing-page-text-subtitle">
@@ -94,11 +89,9 @@ class LandingPageComponent extends Component {
                     </div>
                 </div>
                 <ScrollableAnchor id={'section1'}>
-                    <div className="card-grid">
+                    <div className="cv-card-grid">
                         <div className="card-holder">
-                            <div className={classes}>
-                                <CardComponent title="Mikkel, BSc in Software Development" contents={this.cardOneContents}/>
-                            </div>
+                            <CardComponent title="Mikkel, BSc in Software Development" contents={this.cardOneContents}/>
                             <div className={classes}>
                                 <div className="card-inner-grid">
                                     <ListCardComponent title="Web Skills" contents={this.cardTwoContents}/>
@@ -109,14 +102,13 @@ class LandingPageComponent extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className={classes}>
-                            <div className="landing-page-hero">
-                                <img src={Hero} className="hero-img" alt="hero"/>
-                                <p className="hero-img-text">Mikkel, BSc in Software Development - ITU 2018</p>
-                            </div>
+                        <div className="landing-page-hero">
+                            <img src={Hero} className="hero-img" alt="hero"/>
+                            <p className="hero-img-text">Mikkel, BSc in Software Development - ITU 2018</p>
                         </div>
                     </div>
                 </ScrollableAnchor>
+                <HistoryComponent/>
             </div>
         );
     }

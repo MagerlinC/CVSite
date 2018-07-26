@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="63px" viewBox="0 0 56 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>clerk</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-2.5%" y="-4.2%" width="105.0%" height="110.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Timeline" transform="translate(-320.000000, -234.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Timeline-Card4" filter="url(#filter-1)" transform="translate(389.000000, 264.616883) scale(-1, 1) translate(-389.000000, -264.616883) translate(288.000000, 217.116883)">
+                <g id="clerk" transform="translate(117.311170, 18.909091)">
+                    <path d="M24.6037598,0 C16.3131129,0 9.56812883,6.15222857 9.56812883,13.7142857 C9.56812883,21.2763429 16.3131129,27.4285714 24.6037598,27.4285714 C32.8944068,27.4285714 39.6393908,21.2763429 39.6393908,13.7142857 C39.6393908,6.15222857 32.8944068,0 24.6037598,0 Z" id="Shape"></path>
+                    <path d="M49.8070703,54.5825735 L44.1120889,38.1934895 C42.9111793,34.7376152 39.4122477,32.4156944 35.4052811,32.4156944 L30.6248845,32.4156944 C30.1408214,32.4156944 29.676593,32.5896157 29.334293,32.8990658 L24.9454787,36.8664734 L20.5567862,32.8989558 C20.2144862,32.5895057 19.7502578,32.4155844 19.2661947,32.4155844 L14.485798,32.4155844 C10.4788314,32.4155844 6.97977817,34.7375052 5.77899023,38.1933795 L0.0838871249,54.5825735 C-0.0902441631,55.083766 0.0100243074,55.6300615 0.353906222,56.053589 C0.697788137,56.4771165 1.24415395,56.7272727 1.82532169,56.7272727 L48.0656358,56.7272727 C48.6468035,56.7272727 49.1931693,56.4771165 49.5370512,56.053589 C49.8809331,55.6300615 49.9812016,55.083876 49.8070703,54.5825735 Z M37.7224076,47.8166943 L30.4213054,47.8166943 C29.4132665,47.8166943 28.5960298,47.0778863 28.5960298,46.1665871 C28.5960298,45.255288 29.4132665,44.51648 30.4213054,44.51648 L37.7224076,44.51648 C38.7304465,44.51648 39.5476832,45.255288 39.5476832,46.1665871 C39.5476832,47.0778863 38.7304465,47.8166943 37.7224076,47.8166943 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

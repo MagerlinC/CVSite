@@ -8,18 +8,37 @@ import './App.css';
 
 class HistoryCardComponent extends Component {
     render() {
-        return (
-            <div className="card-component">
-                <h1 className="card-title">{this.props.title}</h1>
-                <div className="card-content">
-                    <div>
-                        {this.props.contents.map(function(listValue, index){
-                            return <p key={index} className="card-item">{listValue}</p>;
-                        })}
+        if(this.props.year && this.props.text) {
+            return (
+                <div className="history-card-component">
+                    <div className="history-card-grid">
+                        <div className="history-card-left">
+                            <p className="history-card-title">{this.props.year}</p>
+                            <div className="history-card-content">
+                                <div>
+                                    <p className="card-item">{this.props.text}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="history-card-right">
+                            <img src={this.props.icon} className="history-card-icon"/>
+                        </div>
                     </div>
                 </div>
-            </div>
-        );
+            );
+        }
+        else {
+            return(
+                <div className="empty-card-component">
+                    <h1></h1>
+                    <div className="card-content">
+                        <div>
+                            <p className="card-item"></p>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
     }
 }
 
