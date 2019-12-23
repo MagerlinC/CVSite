@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import AddressIcon from "./assets/location-pin.svg";
-import PhoneIcon from "./assets/phone-call.svg";
-import MailIcon from "./assets/email.svg";
+import AddressIcon from "../assets/location-pin.svg";
+import PhoneIcon from "../assets/phone-call.svg";
+import MailIcon from "../assets/email.svg";
 import TextareaAutosize from "react-autosize-textarea";
-import "./App.css";
+import "../App.css";
 
 class ContactComponent extends Component {
   constructor(props) {

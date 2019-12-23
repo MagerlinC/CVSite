@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import "./App.css";
+import "../App.css";
 import TrackVisibility from "react-on-screen";
-import HistoryCardComponent from "./HistoryCardComponent";
-import BasketBall from "./assets/history card icons/basketball.svg";
-import Classroom from "./assets/history card icons/classroom.svg";
-import Computer from "./assets/history card icons/computer.svg";
-import CustomerService from "./assets/history card icons/customer-service.svg";
-import OpenBook from "./assets/history card icons/open-magazine.svg";
-import Graduate from "./assets/history card icons/graduate-student-avatar.svg";
-import Diploma from "./assets/history card icons/diploma.svg";
-import Code from "./assets/history card icons/code.svg";
+import HistoryCardComponent from "../components/HistoryCardComponent";
+import BasketBall from "../assets/history card icons/basketball.svg";
+import Classroom from "../assets/history card icons/classroom.svg";
+import Computer from "../assets/history card icons/computer.svg";
+import CustomerService from "../assets/history card icons/customer-service.svg";
+import OpenBook from "../assets/history card icons/open-magazine.svg";
+import Graduate from "../assets/history card icons/graduate-student-avatar.svg";
+import Diploma from "../assets/history card icons/diploma.svg";
+import Code from "../assets/history card icons/code.svg";
 
 class HistoryComponent extends Component {
   constructor(props) {

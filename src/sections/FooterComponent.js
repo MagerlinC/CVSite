@@ -3,11 +3,11 @@
  */
 
 import React, { Component } from "react";
-import LinkedIn from "./assets/linkedin-button.svg";
-import DownloadCV from "./assets/DownloadCV.svg";
-import Github from "./assets/github-logo.svg";
-import CV from "./assets/CV - Mikkel Agerlin.pdf";
-import "./App.css";
+import LinkedIn from "../assets/linkedin-button.svg";
+import DownloadCV from "../assets/DownloadCV.svg";
+import Github from "../assets/github-logo.svg";
+import CV from "../assets/CV - Mikkel Agerlin.pdf";
+import "../App.css";
 
 class FooterComponent extends Component {
   render() {

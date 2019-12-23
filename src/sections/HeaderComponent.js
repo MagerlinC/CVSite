@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Logo from "./assets/MLogo.svg";
+import Logo from "../assets/MLogo.svg";
 import { stack as Menu } from "react-burger-menu";
-import "./App.css";
+import "../App.css";
 
 class HeaderComponent extends Component {
   showSettings(event) {

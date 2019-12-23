@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import "./App.css";
-import CardComponent from "./CardComponent";
-import DownloadIcon from "./assets/download.svg";
-import Thesis from "./assets/Using Interactive Data Visualizations in Agile Planning - MAGC  LUTV 2018.pdf";
-import RambollReport from "./assets/BFOP Business Case Report Group D.pdf";
-import GithubLogo from "./assets/github-logo.svg";
-import TrackVisibility from "react-on-screen";
+import "../App.css";
+import CardComponent from "../components/CardComponent";
+import DownloadIcon from "../assets/download.svg";
+import Thesis from "../assets/Using Interactive Data Visualizations in Agile Planning - MAGC  LUTV 2018.pdf";
+import RambollReport from "../assets/BFOP Business Case Report Group D.pdf";
+import GithubLogo from "../assets/github-logo.svg";
 
 class ProjectsComponent extends Component {
   projectOne = [

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "./App.css";
-import Hero from "./assets/MikkelITU.jpg";
-import ScrollLogo from "./assets/scroll-arrow-to-down.svg";
-import CardComponent from "./CardComponent";
+import "../App.css";
+import Hero from "../assets/MikkelITU.jpg";
+import ScrollLogo from "../assets/scroll-arrow-to-down.svg";
+import CardComponent from "../components/CardComponent";
 
-import ListCardComponent from "./ListCardComponent";
+import ListCardComponent from "../components/ListCardComponent";
 import ScrollableAnchor from "react-scrollable-anchor";
 import HistoryComponent from "./HistoryComponent";
 import TrackVisibility from "react-on-screen";
