@@ -256,9 +256,9 @@ a:hover,
 
 .card-item {
   line-height: 1.5;
-  margin: 0px;
   text-align: left;
-  padding: 6px;
+  margin: 16px;
+  padding: 0;
   font-size: 1em;
 }
 
@@ -513,6 +513,10 @@ ul {
   background-color: $white_background;
   min-height: 100vh;
   max-height: 100vh;
+  .card-item {
+    padding: 6px;
+    margin: 0px;
+  }
 }
 
 .history-component-title {
