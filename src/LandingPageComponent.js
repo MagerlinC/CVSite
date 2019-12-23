@@ -68,7 +68,9 @@ class LandingPageComponent extends Component {
                       </li>
                       <li>
                         <div className="slider-container">
-                          <p className="landing-page-role-text">Web Designer</p>
+                          <p className="landing-page-role-text">
+                            Web Developer
+                          </p>
                         </div>
                       </li>
                       <li>
@@ -93,6 +95,7 @@ class LandingPageComponent extends Component {
         <ScrollableAnchor id={"section1"}>
           <TrackVisibility>
             <div className="CV-section">
+              <h1 className={"skills-header"}>Skills</h1>
               <div className="cv-card-grid">
                 <div className="card-holder">
                   <CardComponent
