@@ -1,18 +1,19 @@
 // General App & Header styling
 
 $main_color: rgba(3, 169, 244, 0.8);
-$accent_color: rgba(50,49,49,1);
+$main_background: rgba(3, 169, 244, 0.2);
+$white_background: white; //rgba(250,250,250,0.8);
+$accent_color: rgba(50, 49, 49, 1);
 $box_shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 
 @font-face {
   font-family: LabelFont;
-  src:url("./assets/ImpactLabelReversed.ttf");
+  src: url("./assets/ImpactLabelReversed.ttf");
 }
 
 @font-face {
   font-family: Oswald;
-  src:url("https://fonts.googleapis.com/css?family=Oswald");
+  src: url("https://fonts.googleapis.com/css?family=Oswald");
 }
 
 .App {
@@ -23,7 +24,9 @@ $box_shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   min-height: 87vh;
 }
 
-.active { background-color: #fff}
+.active {
+  background-color: #fff;
+}
 
 .parallax {
   /* The image used */
@@ -35,7 +38,60 @@ $box_shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-size: cover;
 }
 
-html, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+html,
+body,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+caption {
   margin: 0;
   padding: 0;
   border: 0;
@@ -61,13 +117,17 @@ html, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 html {
   //background: url(code.jpeg) no-repeat center center fixed;
-  background: rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -75,7 +135,7 @@ html {
 }
 
 .header-component {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   z-index: 99;
   position: absolute;
   top: 0;
@@ -101,7 +161,6 @@ html {
   max-height: 16vh;
 }
 
-
 .person-name {
   padding-left: 2%;
   text-decoration: none;
@@ -116,25 +175,41 @@ html {
   color: white;
 }
 
-a { text-decoration: none; color:#000; }
-a:visited { text-decoration: none; color:#000; }
-a:hover { text-decoration: none; color:#000; }
-a:focus { text-decoration: none; color:#000; }
-a:hover, .navBtn:active { text-decoration: none; color:#000; }
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+a:focus {
+  text-decoration: none;
+  color: #000;
+}
+a:hover,
+.navBtn:active {
+  text-decoration: none;
+  color: #000;
+}
 
 // Footer Styling
 
 .footer-component {
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
+  padding: 6px 0 0 6px;
   width: 100%;
   max-height: 15vh;
-  min-height: 13vh;
+  min-height: 10vh;
+  z-index: 99;
   background-color: $accent_color;
 }
 
 .person-info {
-  padding: 2%;
+  padding-top: 0.2%;
   margin-bottom: 0 !important;
   display: grid;
   grid-template-columns: 1fr;
@@ -151,11 +226,11 @@ a:hover, .navBtn:active { text-decoration: none; color:#000; }
 }
 
 .social-section {
+  padding-top: 6px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
-
 }
 
 .social-logo {
@@ -206,8 +281,9 @@ a:hover, .navBtn:active { text-decoration: none; color:#000; }
 }
 
 .info-item {
-  padding: 0.1vh;
-  margin: 0px;
+  font-size: 0.8em;
+  padding: 0.3% 0.2% 0.2% 0.5%;
+  margin: 0;
 }
 
 .list-card-item-icon {
@@ -234,25 +310,42 @@ a:hover, .navBtn:active { text-decoration: none; color:#000; }
   text-align: right;
 }
 
+.CV-section {
+  height: 100vh;
+}
+
+.card-holder {
+  max-height: 100vh;
+}
+
 .landing-page-role-text {
   font-family: LabelFont;
   text-align: left;
   color: white;
-  font-size: 1.2em;
+  font-size: 3vw;
   margin: 0 0 0 5% !important;
   padding: 0;
 }
 
 .scroll-down-section {
+  width: 100%;
   position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 100vh;
+  align-items: center;
+  justify-items: center;
+}
+
+.scroll-down-section.animated {
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
 }
 
 .scroll-logo {
-  opacity: 0.7;
-  max-width: 13%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 75%;
+  opacity: 0.8;
+  max-width: 3%;
 }
 
 // Scroll Logo Breathing
@@ -261,61 +354,10 @@ a:hover, .navBtn:active { text-decoration: none; color:#000; }
   width: 270px;
   padding: 20px;
   margin: 50px auto;
-  -webkit-animation: breathing 4s ease-out infinite normal;
-  animation: breathing 4s ease-out infinite normal;
   font-size: 24px;
   color: #fff;
   -webkit-font-smoothing: antialiased;
   text-align: center;
-}
-
-
-@-webkit-keyframes breathing {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-
-  30% {
-    -webkit-transform: scale(1.4);
-    transform: scale(1.4);
-  }
-
-  60% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@keyframes breathing {
-  0% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-
-  30% {
-    -webkit-transform: scale(1.4);
-    -ms-transform: scale(1.4);
-    transform: scale(1.4);
-  }
-
-  60% {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-
-  100% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
 }
 
 .text-and-scrolling-text {
@@ -323,37 +365,32 @@ a:hover, .navBtn:active { text-decoration: none; color:#000; }
   grid-template-columns: 1fr 1fr;
 }
 
-a
-{
+a {
   text-decoration: none;
   color: #111b47;
 }
-
 
 .animation-show {
   transition: all 0.75s ease;
   opacity: 1;
 }
 
-
 /**** slider ****/
 
-#slider, ul
-{
+#slider,
+ul {
   margin-top: 0 !important;
   height: 200px;
 }
 
-#slider
-{
+#slider {
   margin: auto;
   overflow: hidden;
   position: relative;
   width: 90%;
 }
 
-#slider li
-{
+#slider li {
   float: left;
   position: relative;
   width: 600px;
@@ -361,34 +398,30 @@ a
   height: 200px;
 }
 
-#slider ul
-{
+#slider ul {
   list-style: none;
   position: absolute;
   left: 0px;
   top: 0px;
   width: 9000px;
-  transition: left .3s linear;
-  -moz-transition: left .3s linear;
-  -o-transition: left .3s linear;
-  -webkit-transition: left .3s linear;
+  transition: left 0.5s linear;
+  -moz-transition: left 0.5s linear;
+  -o-transition: left 0.5s linear;
+  -webkit-transition: left 0.5s linear;
   margin-left: -25px;
   color: #666;
 }
 
 /*** Content ***/
 
-.slider-container
-{
+.slider-container {
   margin: 0 !important;
   padding: 0;
   // width: 550px;
   min-height: 180px;
 }
 
-
-.slider-container  p
-{
+.slider-container p {
   margin: 0;
   line-height: 150%;
   text-align: justify;
@@ -397,24 +430,59 @@ a
 /*** target hooks ****/
 
 @-webkit-keyframes slide-animation {
-  0% {opacity:0;}
-  2% {opacity:1;}
-  20% {left:0px; opacity:1;}
-  22.5% {opacity:0.6;}
-  25% {left:-600px; opacity:1;}
-  45% {left:-600px; opacity:1;}
-  47.5% {opacity:0.6;}
-  50% {left:-1200px; opacity:1;}
-  70% {left:-1200px; opacity:1;}
-  72.5% {opacity:0.6;}
-  75% {left:-1800px; opacity:1;}
-  95% {opacity:1;}
-  98% {left:-1800px; opacity:0;}
-  100% {left:0px; opacity:0;}
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  20% {
+    left: 0px;
+    opacity: 1;
+  }
+  22.5% {
+    opacity: 0.6;
+  }
+  25% {
+    left: -600px;
+    opacity: 1;
+  }
+  45% {
+    left: -600px;
+    opacity: 1;
+  }
+  47.5% {
+    opacity: 0.6;
+  }
+  50% {
+    left: -1200px;
+    opacity: 1;
+  }
+  70% {
+    left: -1200px;
+    opacity: 1;
+  }
+  72.5% {
+    opacity: 0.6;
+  }
+  75% {
+    left: -1800px;
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  98% {
+    left: -1800px;
+    opacity: 0;
+  }
+  100% {
+    left: 0px;
+    opacity: 0;
+  }
 }
 
-#slider ul
-{
+#slider ul {
   -webkit-animation: slide-animation 8s infinite;
 }
 
@@ -425,8 +493,7 @@ a
 
 /* use to paused the content on mouse over */
 
-#slider ul:hover
-{
+#slider ul:hover {
   -moz-animation-play-state: paused;
   -webkit-animation-play-state: paused;
 }
@@ -434,9 +501,15 @@ a
 // History Component Styling
 
 .history-component {
-  background-color: white;
+  background-color: $white_background;
   min-height: 100vh;
   max-height: 100vh;
+}
+
+.history-component-title {
+  font-size: 2em;
+  color: rgba(40, 50, 40, 0.8);
+  padding: 1% 2% 0 2%;
 }
 
 .job-and-education-grid {
@@ -445,7 +518,7 @@ a
 }
 
 .timeline {
-  background: url('./assets/Timeline Arrow.svg');
+  background: url("./assets/Timeline Arrow.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -485,7 +558,7 @@ a
   text-align: center;
   width: 100%;
   height: 100%;
-  background-color: #F0625D;
+  background-color: #f0625d;
 }
 
 .history-card-content {
@@ -530,12 +603,14 @@ a
 }
 
 @keyframes come-in {
-  to { transform: translateY(0); }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .animation-hide {
   opacity: 0;
-  pointer-events:none;
+  pointer-events: none;
 }
 
 // BURGER MENU STYLING
@@ -550,7 +625,7 @@ a
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 /* Position and sizing of clickable cross button */
@@ -566,7 +641,7 @@ a
 
 /* General sidebar styles */
 .bm-menu {
-  background: rgba(49,55,55,0.7);
+  background: rgba(49, 55, 55, 0.7);
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -598,74 +673,73 @@ a
 }
 
 .menu-item {
-  font-family: 'Oswald', sans-serif;
-  font-weight:500;
-  text-transform:uppercase;
-  text-decoration:none;
-  color:white;
-  margin:0 15px;
-  font-size:16px;
-  letter-spacing:1px;
-  position:relative;
-  display:inline-block;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  margin: 0 15px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
 }
 // Menu Item Strikethrough on hover
-.menu-item:before{
-  content:'';
+.menu-item:before {
+  content: "";
   position: absolute;
   width: 100%;
   height: 1px;
-  background:white;
-  top:47%;
-  animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+  background: white;
+  top: 47%;
+  animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
-.menu-item:hover:before{
-  animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
-
+.menu-item:hover:before {
+  animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
-@keyframes in{
-  0%{
+@keyframes in {
+  0% {
     width: 0;
-    left:0;
-    right:auto;
+    left: 0;
+    right: auto;
   }
-  100%{
-    left:0;
-    right:auto;
+  100% {
+    left: 0;
+    right: auto;
     width: 100%;
   }
 }
-@keyframes out{
-  0%{
-    width:100%;
+@keyframes out {
+  0% {
+    width: 100%;
     left: auto;
     right: 0;
   }
-  100%{
+  100% {
     width: 0;
     left: auto;
     right: 0;
   }
 }
-@keyframes show{
-  0%{
-    opacity:0;
-    transform:translateY(-10px);
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  100%{
-    opacity:1;
-    transform:translateY(0);
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @for $i from 1 through 5 {
-  .menu-item:nth-child(#{$i}){
-    animation:show .2s #{$i*0.1+1}s ease 1 both;
+  .menu-item:nth-child(#{$i}) {
+    animation: show 0.2s #{$i * 0.1+1}s ease 1 both;
   }
 }
 
 .shader-overlay {
-  background: rgba(35,35,35,0.5);
+  background: rgba(35, 35, 35, 0.5);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -695,7 +769,7 @@ a
 
 .landing-page-text-subtitle {
   text-align: right !important;
-  font-size: 1.2em;
+  font-size: 3vw;
   font-family: LabelFont;
 }
 
@@ -722,7 +796,7 @@ a
 }
 
 .cv-card-grid {
-  background-color: rgba(245,245,245,0.8);
+  background-color: $white_background;
   max-height: 100vh;
   min-height: 100vh;
   display: grid;
@@ -742,19 +816,46 @@ a
 }
 
 .hero-img-text {
-  color: rgba(0,0,0,0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 // Contact Page Styling
 
-.contact-component {
-}
-
 .contact-text {
+  color: white;
   align-self: center;
 }
 
+.contact-component {
+  min-height: 70vh;
+}
+
+.contact-header {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  font-family: Oswald;
+  font-size: 5em;
+  color: white;
+  text-align: center;
+}
+
+.contact-parallax {
+  /* The image used */
+  background-image: url("./assets/hello-i-m-nik-281498-unsplash.jpg");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-content {
+  height: 30vh;
+}
+
 .contact-grid {
+  height: 70vh;
   margin-top: 6vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -785,7 +886,7 @@ a
   padding: 5%;
   align-self: center;
   justify-self: center;
-  max-width: 30%;
+  max-width: 35%;
 }
 
 .contact-input {
@@ -799,7 +900,6 @@ a
   text-align: left;
   padding: 2%;
 }
-
 
 .send-button {
   background-color: $main_color;
@@ -826,6 +926,30 @@ a
   grid-template-columns: 1fr 1fr;
 }
 
+.projects-header {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  font-family: Oswald;
+  font-size: 5em;
+  color: white;
+  text-align: center;
+}
+
+.projects-parallax {
+  /* The image used */
+  background-image: url("./assets/james-pond-185593-unsplash.jpg");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.projects-content {
+  min-height: 50vh;
+}
+
 .double-card-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -834,24 +958,6 @@ a
 .spacer {
   min-height: 13vh;
 }
-
-.color-header {
-  margin-bottom: 2%;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  align-items: center;
-  background-color: $accent_color;
-  width: 100%;
-  min-height: 15vh;
-  color: white;
-}
-
-.color-header-title {
-  font-family: Oswald;
-  font-size: 3em;
-}
-
 
 .card-overlay-button {
   position: absolute;
@@ -882,4 +988,3 @@ a
   max-width: 90%;
   opacity: 0.8;
 }
-

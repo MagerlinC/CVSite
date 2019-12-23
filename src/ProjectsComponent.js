@@ -3,8 +3,9 @@ import './App.css';
 import CardComponent from "./CardComponent";
 import DownloadIcon from './assets/download.svg';
 import Thesis from './assets/Using Interactive Data Visualizations in Agile Planning - MAGC  LUTV 2018.pdf';
+import RambollReport from './assets/BFOP Business Case Report Group D.pdf';
 import GithubLogo from './assets/github-logo.svg';
-import ColorHeader from "./ColorHeader";
+import TrackVisibility from 'react-on-screen';
 
 class ProjectsComponent extends Component {
 
@@ -19,43 +20,75 @@ class ProjectsComponent extends Component {
         "Rambøll Denmark uses Virtual Reality to showcase architecture, buildings and the building process for clients and engineers. Piloting the virtual reality equipment requires training, tbhat Rambøll had written guides on.",
         "These guides were originally stored in a Sharepoint solution, but it was quickly discovered that access to the guides was needed by visitors and guests, without the need for logging in to internal services.",
         "For this reason, I built an online, open and Web-based solution in Angular, exposing their guides and providing a platform for sharing and uploading of future guides for VR equipment." +
-        "The code for this project can be found on my Github."
+        " The code for this project can be found on my Github."
     ];
 
     projectThree = [
-        "Digitalizing Knowledge Sharing in Rambøll Denmark"
+        "Digitalizing Knowledge Sharing in Rambøll Denmark." +
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel pellentesque turpis, vitae pellentesque urna. Vestibulum lacinia sem enim, ut mollis libero molestie non. Pellentesque ut nunc congue, tristique mauris eget, viverra lacus. Phasellus ac odio ultricies, fermentum justo sed, commodo lorem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis libero urna. Praesent ut massa metus."
+
+    ];
+
+    projectFour = [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel pellentesque turpis, vitae pellentesque urna. Vestibulum lacinia sem enim, ut mollis libero molestie non. Pellentesque ut nunc congue, tristique mauris eget, viverra lacus. Phasellus ac odio ultricies, fermentum justo sed, commodo lorem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis libero urna. Praesent ut massa metus." +
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel pellentesque turpis, vitae pellentesque urna. Vestibulum lacinia sem enim, ut mollis libero molestie non. Pellentesque ut nunc congue, tristique mauris eget, viverra lacus. Phasellus ac odio ultricies, fermentum justo sed, commodo lorem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis libero urna. Praesent ut massa metus."
     ];
 
     render() {
         return (
             <div className="projects-component">
-                <ColorHeader title="PROJECTS"/>
-                <div className="projects-grid">
-                        <CardComponent title="Thesis: Using Data Visualizations in Agile Planning"
-                                       contents={this.projectOne}
-                                       link={Thesis}
-                                       logo={DownloadIcon}
-                        />
-                        <CardComponent title="Giving Virtual Solutions Lab Users Access to Guides on the fly in Rambøll - Frontend"
-                                       contents={this.projectTwo}
-                                       link='https://github.com/MagerlinC/VSLGuides'
-                                       logo={GithubLogo}
-                        />
-                        <CardComponent title="Second Title"
-                                       contents={this.projectThree}
-                                       link="https://github.com/MagerlinC/VSL-Web-API'"
-                                       logo={GithubLogo}
-                        />
-                        <CardComponent title="Thesis: Using Data Visualizations in Agile Planning"
-                                       contents={this.projectOne}
-                                       link={Thesis}
-                                       logo={DownloadIcon}
-                        />
+                <div className="projects-parallax">
+                    <div className="shader-overlay">
+                        <div className="projects-content">
+                            <p className="projects-header">PROJECTS</p>
+                        </div>
+                        <div className="projects-grid">
+                            <TrackVisibility once={true}>
+                                <VisibilityWrapper title="Thesis: Using Data Visualizations in Agile Planning"
+                                                   contents={this.projectOne}
+                                                   link={Thesis}
+                                                   logo={DownloadIcon}
+                                />
+                            </TrackVisibility>
+                            <TrackVisibility once={true}>
+                                <VisibilityWrapper title="Giving Virtual Solutions Lab Users Access to Guides on the fly in Rambøll - Frontend"
+                                                   contents={this.projectTwo}
+                                                   link='https://github.com/MagerlinC/VSLGuides'
+                                                   logo={GithubLogo}
+                                />
+                            </TrackVisibility>
+                            <TrackVisibility once={true}>
+                                <VisibilityWrapper title="Digitalizing Knowledge Sharing in Rambøll"
+                                                   contents={this.projectThree}
+                                                   link={RambollReport}
+                                                   logo={DownloadIcon}
+                                />
+                            </TrackVisibility>
+                            <TrackVisibility once={true}>
+                                <VisibilityWrapper title="Building a responsive personal website in React"
+                                                   contents={this.projectFour}
+                                                   link="https://github.com/MagerlinC/CVSite"
+                                                   logo={GithubLogo}
+                                />
+                            </TrackVisibility>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
     }
 }
+
+const VisibilityWrapper = (props) => {
+    const style = props.isVisible ? 'animated fadeInUp' : 'animation-hide';
+    return (
+        <div className={style}>
+            <CardComponent title={props.title} contents={props.contents} link={props.link} logo={props.logo}/>
+        </div>
+    );
+};
+
+
 
 
 export default ProjectsComponent;
