@@ -1,11 +1,11 @@
 // General App & Header styling
 
-$main_color: rgba(3, 169, 244, 0.8);
-$card_background: #009688;
+$main_color: #009688;
 $white_background: white; //rgba(250,250,250,0.8);
 $accent_color: rgba(50, 49, 49, 1);
 $box_shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 $text-title-grey: rgba(40, 50, 40, 0.8);
+$border-color: #f3f3f3;
 
 @font-face {
   font-family: LabelFont;
@@ -204,8 +204,7 @@ a:hover,
 .footer-component {
   padding: 6px 0 0 6px;
   width: 100%;
-  max-height: 15vh;
-  min-height: 10vh;
+  height: 10vh;
   z-index: 99;
   background-color: $accent_color;
 }
@@ -268,7 +267,7 @@ a:hover,
   margin: 2vh 1vw 1vh 1vw;
   color: white;
   box-shadow: $box_shadow;
-  background-color: $card_background;
+  background-color: $main_color;
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -557,7 +556,7 @@ ul {
   align-self: start;
   color: white;
   box-shadow: $box_shadow;
-  background-color: $card_background;
+  background-color: $main_color;
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -760,6 +759,7 @@ ul {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100%;
 }
 
 .landing-page-logo {
@@ -847,86 +847,95 @@ ul {
 }
 
 .contact-component {
-  min-height: 70vh;
-}
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  .contact-header {
+    position: relative;
+    padding-top: 66px;
+    font-family: Oswald;
+    font-size: 5em;
+    color: white;
+    text-align: center;
+  }
 
-.contact-header {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  font-family: Oswald;
-  font-size: 5em;
-  color: white;
-  text-align: center;
-}
+  .contact-parallax {
+    /* The image used */
+    background-image: url("./assets/sergio-rodriguez-portugues-del-olmo-XM-elQCC9H8-unsplash.jpg");
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
 
-.contact-parallax {
-  /* The image used */
-  background-image: url("./assets/hello-i-m-nik-281498-unsplash.jpg");
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+  .contact-grid {
+    margin-top: 66px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .mail-section {
+      input,
+      textarea {
+        border: 1px solid $border-color;
+        border-radius: 4px;
+      }
+    }
+  }
 
-.contact-content {
-  height: 30vh;
-}
+  .contact-section {
+    margin-top: 16px;
+    margin-right: 42px;
+    border-radius: 4px;
+    justify-self: center;
+    .icon-and-text {
+      display: grid;
+      grid-template-columns: 0.3fr 1fr;
+      background: #535353;
+      opacity: 0.8;
+    }
+  }
 
-.contact-grid {
-  height: 70vh;
-  margin-top: 6vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
+  .mail-section {
+    margin-left: 42px;
+    margin-top: 16px;
+    align-self: center;
+    justify-self: center;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
-.contact-section {
-  padding: 10% 5% 5% 5%;
-  justify-self: center;
-  width: 80%;
-}
+  .contact-icon {
+    margin: 2%;
+    padding: 5%;
+    align-self: center;
+    justify-self: center;
+    max-width: 35%;
+  }
 
-.mail-section {
-  padding: 5%;
-  align-self: center;
-  justify-self: center;
-  width: 80%;
-  display: grid;
-  grid-template-columns: 1fr;
-}
+  .contact-input {
+    margin-top: 16px;
+    padding: 12px;
+    color: black;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 
-.icon-and-text {
-  display: grid;
-  grid-template-columns: 0.3fr 1fr;
-}
+  .message-input {
+    margin-top: 2%;
+    text-align: left;
+    padding: 2%;
+  }
 
-.contact-icon {
-  margin: 2%;
-  padding: 5%;
-  align-self: center;
-  justify-self: center;
-  max-width: 35%;
-}
-
-.contact-input {
-  margin-top: 2%;
-  padding: 2%;
-  color: black;
-}
-
-.message-input {
-  margin-top: 2%;
-  text-align: left;
-  padding: 2%;
-}
-
-.send-button {
-  background-color: $card_background;
-  color: white;
-  font-size: 1.2em;
-  margin: 5% 2% 2% 2%;
-  padding: 2%;
+  .send-button {
+    background-color: $main_color;
+    color: white;
+    font-size: 1.2em;
+    margin: 5% 2% 2% 2%;
+    padding: 2%;
+  }
 }
 
 .spacer-bar {

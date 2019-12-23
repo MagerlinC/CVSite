@@ -49,7 +49,7 @@ class ProjectsComponent extends Component {
       {
         title:
           "Digitizing Knowledge Sharing in Rambøll - A business case analysis",
-        contents: ["TEST"],
+        contents: ["To come..."],
         link: RambollReport,
         logo: DownloadIcon
       }

@@ -172,8 +172,7 @@ a:hover,
 .footer-component {
   padding: 6px 0 0 6px;
   width: 100%;
-  max-height: 15vh;
-  min-height: 10vh;
+  height: 10vh;
   z-index: 99;
   background-color: #323131; }
 
@@ -632,7 +631,8 @@ ul {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  height: 100%; }
 
 .landing-page-logo {
   position: relative;
@@ -703,75 +703,73 @@ ul {
   align-self: center; }
 
 .contact-component {
-  min-height: 70vh; }
-
-.contact-header {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  font-family: Oswald;
-  font-size: 5em;
-  color: white;
-  text-align: center; }
-
-.contact-parallax {
-  /* The image used */
-  background-image: url("./assets/hello-i-m-nik-281498-unsplash.jpg");
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.contact-content {
-  height: 30vh; }
-
-.contact-grid {
-  height: 70vh;
-  margin-top: 6vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr; }
-
-.contact-section {
-  padding: 10% 5% 5% 5%;
-  justify-self: center;
-  width: 80%; }
-
-.mail-section {
-  padding: 5%;
-  align-self: center;
-  justify-self: center;
-  width: 80%;
-  display: grid;
-  grid-template-columns: 1fr; }
-
-.icon-and-text {
-  display: grid;
-  grid-template-columns: 0.3fr 1fr; }
-
-.contact-icon {
-  margin: 2%;
-  padding: 5%;
-  align-self: center;
-  justify-self: center;
-  max-width: 35%; }
-
-.contact-input {
-  margin-top: 2%;
-  padding: 2%;
-  color: black; }
-
-.message-input {
-  margin-top: 2%;
-  text-align: left;
-  padding: 2%; }
-
-.send-button {
-  background-color: #009688;
-  color: white;
-  font-size: 1.2em;
-  margin: 5% 2% 2% 2%;
-  padding: 2%; }
+  height: 90vh;
+  display: flex;
+  flex-direction: column; }
+  .contact-component .contact-header {
+    position: relative;
+    padding-top: 66px;
+    font-family: Oswald;
+    font-size: 5em;
+    color: white;
+    text-align: center; }
+  .contact-component .contact-parallax {
+    /* The image used */
+    background-image: url("./assets/sergio-rodriguez-portugues-del-olmo-XM-elQCC9H8-unsplash.jpg");
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%; }
+  .contact-component .contact-grid {
+    margin-top: 66px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    .contact-component .contact-grid .mail-section input,
+    .contact-component .contact-grid .mail-section textarea {
+      border: 1px solid #f3f3f3;
+      border-radius: 4px; }
+  .contact-component .contact-section {
+    margin-top: 16px;
+    margin-right: 42px;
+    border-radius: 4px;
+    justify-self: center; }
+    .contact-component .contact-section .icon-and-text {
+      display: grid;
+      grid-template-columns: 0.3fr 1fr;
+      background: #535353;
+      opacity: 0.8; }
+  .contact-component .mail-section {
+    margin-left: 42px;
+    margin-top: 16px;
+    align-self: center;
+    justify-self: center;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr; }
+  .contact-component .contact-icon {
+    margin: 2%;
+    padding: 5%;
+    align-self: center;
+    justify-self: center;
+    max-width: 35%; }
+  .contact-component .contact-input {
+    margin-top: 16px;
+    padding: 12px;
+    color: black; }
+    .contact-component .contact-input:first-child {
+      margin-top: 0; }
+  .contact-component .message-input {
+    margin-top: 2%;
+    text-align: left;
+    padding: 2%; }
+  .contact-component .send-button {
+    background-color: #009688;
+    color: white;
+    font-size: 1.2em;
+    margin: 5% 2% 2% 2%;
+    padding: 2%; }
 
 .spacer-bar {
   margin: 5%;
