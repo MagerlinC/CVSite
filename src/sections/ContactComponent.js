@@ -102,7 +102,20 @@ class ContactComponent extends Component {
     );
   }
   sendMail(name, email, msg) {
-    console.log(name, email, msg);
+    const templateId = "cv_site_contact";
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: msg
+    };
+    window.emailjs
+      .send("gmail", templateId, templateParams)
+      .then(res => {
+        console.log("Email successfully sent!");
+      })
+      .catch(err => console.error("EmailJS Error: ", err));
+    // Clean state
+    this.setState({ email: "", msg: "", name: "" });
   }
 }
 

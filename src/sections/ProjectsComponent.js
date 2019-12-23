@@ -24,7 +24,13 @@ class ProjectsComponent extends Component {
       {
         title:
           "React-Virtualized-DnD - A fully virtualized Drag and Drop framework for React",
-        contents: ["TEST"],
+        contents: [
+          "In my work at Forecast, we often ran into issues of performance on large interactive web-components for clients with big projects.",
+          "At the time, no drag and drop libraries supported virtualization technologies, forcing us to chose drag-and-drop functionality over performance.",
+          "This, however, changed, when I built React-Virtualized-DnD.",
+          "React-Virtualized-Dnd is a React-based, fully virtualized drag-and-drop framework, enabling the the cross over of great user interaction and great performance.",
+          "I still develop and maintain this framework as open source software."
+        ],
         link: "https://www.npmjs.com/package/react-virtualized-dnd",
         logo: NPMLogo
       },
@@ -41,7 +47,8 @@ class ProjectsComponent extends Component {
         logo: GithubLogo
       },
       {
-        title: "Digitalizing Knowledge Sharing in Rambøll",
+        title:
+          "Digitizing Knowledge Sharing in Rambøll - A business case analysis",
         contents: ["TEST"],
         link: RambollReport,
         logo: DownloadIcon

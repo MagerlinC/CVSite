@@ -1,6 +1,7 @@
 {
   "name": "materialtest",
   "version": "0.1.0",
+  "homepage": "http://www.mikkelagerlin.dk/",
   "private": true,
   "dependencies": {
     "animate.css": "^3.6.1",
