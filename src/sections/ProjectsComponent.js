@@ -5,6 +5,7 @@ import DownloadIcon from "../assets/download.svg";
 import Thesis from "../assets/Using Interactive Data Visualizations in Agile Planning - MAGC  LUTV 2018.pdf";
 import RambollReport from "../assets/BFOP Business Case Report Group D.pdf";
 import GithubLogo from "../assets/github-logo.svg";
+import NPMLogo from "../assets/npm-logo.png";
 
 class ProjectsComponent extends Component {
   render() {
@@ -19,6 +20,13 @@ class ProjectsComponent extends Component {
         ],
         link: Thesis,
         logo: DownloadIcon
+      },
+      {
+        title:
+          "React-Virtualized-DnD - A fully virtualized Drag and Drop framework for React",
+        contents: ["TEST"],
+        link: "https://www.npmjs.com/package/react-virtualized-dnd",
+        logo: NPMLogo
       },
       {
         title:
