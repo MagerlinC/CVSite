@@ -131,6 +131,9 @@ html {
   top: 2%;
   left: 2%;
   opacity: 0.9; }
+  .logo-img-container:hover {
+    opacity: 1;
+    transform: scale(1.05); }
 
 .logo-img {
   padding-top: 8%;
