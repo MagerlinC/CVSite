@@ -846,6 +846,9 @@ ul {
     margin: 16px;
     padding: 0;
   }
+  .landing-page-hero-mobile {
+    display: none;
+  }
 }
 
 .card-inner-grid {
@@ -1061,4 +1064,80 @@ ul {
 .overlay-button-icon {
   max-width: 90%;
   opacity: 0.8;
+}
+
+// Mobile
+
+@media (min-width: 400px) and (max-width: 800px) {
+  .landing-page-role-text,
+  .landing-page-text-subtitle {
+    padding-top: 16px;
+    font-size: 18px;
+  }
+  .scroll-logo {
+    max-width: 8%;
+  }
+  .logo-img-container {
+    left: 0;
+  }
+  .cv-card-grid {
+    grid-template-columns: 1fr;
+    .landing-page-hero {
+      display: none;
+    }
+    .landing-page-hero-mobile {
+      display: block;
+      padding-top: 6px;
+      .hero-img-text {
+        padding-top: 6px;
+      }
+    }
+  }
+  .CV-section {
+    height: auto;
+  }
+
+  .contact-component {
+    height: 91vh;
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+    .contact-section {
+      display: none;
+    }
+  }
+
+  .projects-component {
+    .projects-grid {
+      grid-template-columns: 1fr;
+      padding: 0 24px;
+      .card-title {
+        font-size: 16px;
+      }
+      .card-item {
+        font-size: 14px;
+      }
+    }
+  }
+  .history-component {
+    height: auto;
+    min-height: auto;
+    max-height: 200vh;
+    .history-card-grid {
+      grid-template-columns: 1fr;
+    }
+    .history-component-title {
+      padding: 8px 6px;
+    }
+    .timeline {
+      background-position: initial;
+    }
+    .education,
+    .job {
+      margin: 6px 10px;
+      .history-card-component {
+        margin: 6px 8px;
+      }
+    }
+  }
 }

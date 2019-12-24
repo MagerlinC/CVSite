@@ -62,7 +62,7 @@ class LandingPageComponent extends Component {
                       <li>
                         <div className="slider-container">
                           <p className="landing-page-role-text">
-                            Software Developer
+                            Software Engineer
                           </p>
                         </div>
                       </li>
@@ -98,6 +98,12 @@ class LandingPageComponent extends Component {
               <h1 className={"skills-header"}>Skills</h1>
               <div className="cv-card-grid">
                 <div className="card-holder">
+                  <div className="landing-page-hero-mobile">
+                    <img src={Hero} className="hero-img" alt="hero" />
+                    <p className="hero-img-text">
+                      Mikkel, BSc in Software Development - ITU 2018
+                    </p>
+                  </div>
                   <CardComponent
                     title="Mikkel, BSc in Software Development"
                     contents={this.cardOneContents}

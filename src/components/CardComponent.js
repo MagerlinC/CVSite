@@ -13,20 +13,27 @@ class CardComponent extends Component {
     };
   }
 
-  handlePreviewMouseEnter(e) {
+  hidePreview(e) {
     this.setState({ showPreview: false });
   }
 
-  onCardMouseLeave(e) {
+  showPreview(e) {
     if (!this.state.showPreview) {
       this.setState({ showPreview: true });
     }
   }
 
+  togglePreview(e) {
+    this.setState(prevState => ({
+      showPreview: !prevState.showPreview
+    }));
+  }
+
   render() {
     return (
       <div
-        onMouseLeave={this.onCardMouseLeave.bind(this)}
+        onTouchStart={this.togglePreview.bind(this)}
+        onMouseLeave={this.showPreview.bind(this)}
         className={
           "card-component" + (this.state.showPreview ? " preview" : "")
         }
@@ -34,7 +41,7 @@ class CardComponent extends Component {
         <h1 className="card-title">{this.props.title}</h1>
         {this.state.showPreview ? (
           <div
-            onMouseEnter={this.handlePreviewMouseEnter.bind(this)}
+            onMouseEnter={this.hidePreview.bind(this)}
             className={"card-content preview-content"}
           >
             {this.props.previewImg ? (
