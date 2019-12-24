@@ -873,7 +873,7 @@ ul {
   max-width: 90%;
   opacity: 0.8; }
 
-@media (min-width: 400px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .landing-page-role-text,
   .landing-page-text-subtitle {
     padding-top: 16px;
