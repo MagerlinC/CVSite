@@ -73,7 +73,8 @@ class HistoryComponent extends Component {
       },
       {
         year: "2019-present",
-        text: "Full Stack Developer at Forecast.",
+        text:
+          "Full Stack Developer at Forecast. \n React App, GraphQL, Java services",
         icon: Code
       }
     ];

@@ -6,6 +6,7 @@ $accent_color: rgba(50, 49, 49, 1);
 $box_shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 $text-title-grey: rgba(40, 50, 40, 0.8);
 $border-color: #f3f3f3;
+$shader-color: rgba(35, 35, 35, 0.5);
 
 @font-face {
   font-family: LabelFont;
@@ -20,6 +21,7 @@ $border-color: #f3f3f3;
 .App {
   text-align: center;
   max-width: 100vw;
+  background-color: #f3f3f3;
 }
 
 #root {
@@ -262,6 +264,7 @@ a:hover,
 }
 
 .card-component {
+  transition: max-height 0.5s ease-out;
   position: relative;
   align-self: start;
   margin: 2vh 1vw 1vh 1vw;
@@ -270,6 +273,23 @@ a:hover,
   background-color: $main_color;
   display: grid;
   grid-template-columns: 1fr;
+  &.preview {
+    max-height: 30vh;
+  }
+  max-height: 100vh;
+  .preview-content {
+    position: relative;
+    height: 100%;
+    .preview-image-container {
+      position: relative;
+      height: 100%;
+      .preview-image {
+        opacity: 0.9;
+        margin: 16px;
+        max-width: 50%;
+      }
+    }
+  }
 }
 
 .empty-card-component {
@@ -509,7 +529,6 @@ ul {
 // History Component Styling
 
 .history-component {
-  background-color: $white_background;
   min-height: 100vh;
   max-height: 100vh;
   .card-item {
@@ -754,12 +773,13 @@ ul {
 }
 
 .shader-overlay {
-  background: rgba(35, 35, 35, 0.5);
+  background: $shader-color;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   height: 100%;
+  flex-grow: 1;
 }
 
 .landing-page-logo {
@@ -813,7 +833,6 @@ ul {
 
 .cv-card-grid {
   margin: 0 42px;
-  background-color: $white_background;
   height: 100%;
   display: grid;
   align-items: center;
@@ -861,7 +880,7 @@ ul {
 
   .contact-parallax {
     /* The image used */
-    background-image: url("./assets/sergio-rodriguez-portugues-del-olmo-XM-elQCC9H8-unsplash.jpg");
+    background-image: url("./assets/mermaid.jpg");
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -886,13 +905,20 @@ ul {
   .contact-section {
     margin-top: 16px;
     margin-right: 42px;
-    border-radius: 4px;
     justify-self: center;
     .icon-and-text {
       display: grid;
       grid-template-columns: 0.3fr 1fr;
       background: #535353;
       opacity: 0.8;
+      &:first-child {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+      }
+      &:last-child {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
     }
   }
 
@@ -954,6 +980,12 @@ ul {
   padding: 0 66px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  .card-component {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .projects-header {
@@ -964,26 +996,33 @@ ul {
   color: white;
   text-align: center;
 }
-
-.projects-parallax {
-  /* The image used */
-  background-image: url("./assets/james-pond-185593-unsplash.jpg");
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.projects-content {
-  position: relative;
+.projects-component {
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
-}
+  .projects-parallax {
+    display: flex;
+    flex-direction: column;
+    /* The image used */
+    background-image: url("./assets/storm_trooper.jpg");
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-grow: 1;
+    height: 100%;
+  }
+  .projects-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
 
-.double-card-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  .double-card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 .spacer {
