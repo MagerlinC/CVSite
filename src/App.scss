@@ -208,7 +208,7 @@ a:hover,
 // Footer Styling
 
 .footer-component {
-  padding: 6px 0 0 6px;
+  padding: 6px 0 0 0;
   width: 100%;
   height: 10vh;
   z-index: 99;
@@ -1067,7 +1067,6 @@ ul {
 }
 
 // Mobile
-
 @media screen and (max-width: 800px) {
   .landing-page-role-text,
   .landing-page-text-subtitle {
