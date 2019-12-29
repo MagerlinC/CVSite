@@ -18,7 +18,7 @@ class CardComponent extends Component {
   }
 
   showPreview(e) {
-    if (!this.state.showPreview) {
+    if (!this.state.showPreview && this.props.previewImg) {
       this.setState({ showPreview: true });
     }
   }

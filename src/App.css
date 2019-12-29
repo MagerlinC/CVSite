@@ -136,8 +136,8 @@ html {
     transform: scale(1.05); }
 
 .logo-img {
-  padding-top: 8%;
-  max-width: 40%;
+  padding-top: 16px;
+  max-width: 100px;
   max-height: 16vh; }
 
 .person-name {
@@ -174,7 +174,7 @@ a:hover,
   color: #000; }
 
 .footer-component {
-  padding: 6px 0 0 6px;
+  padding: 0;
   width: 100%;
   height: 10vh;
   z-index: 99;
@@ -192,9 +192,10 @@ a:hover,
 
 .footer-grid {
   display: grid;
+  padding-top: 16px;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important; }
+  margin-bottom: 0;
+  padding-bottom: 0; }
 
 .social-section {
   padding-top: 6px;
@@ -258,7 +259,7 @@ a:hover,
 
 .info-item {
   font-size: 0.8em;
-  padding: 0.3% 0.2% 0.2% 0.5%;
+  padding: 6px;
   margin: 0; }
 
 .list-card-item-icon {
@@ -279,18 +280,18 @@ a:hover,
   text-align: right; }
 
 .CV-section {
-  height: 100vh;
   display: flex;
   flex-direction: column; }
   .CV-section .skills-header {
     padding-top: 8px;
     color: rgba(40, 50, 40, 0.8);
-    font-size: 2em;
+    font-size: 3em;
     font-family: Oswald;
     font-weight: bold; }
 
 .landing-page-role-text {
   font-family: LabelFont;
+  white-space: nowrap;
   text-align: left;
   color: white;
   font-size: 3vw;
@@ -326,7 +327,9 @@ a:hover,
 
 .text-and-scrolling-text {
   display: grid;
-  grid-template-columns: 1fr 1fr; }
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  min-height: 60px; }
 
 a {
   text-decoration: none;
@@ -336,43 +339,11 @@ a {
   transition: all 0.75s ease;
   opacity: 1; }
 
-/**** slider ****/
-#slider,
-ul {
-  margin-top: 0 !important;
-  height: 200px; }
-
-#slider {
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  width: 90%; }
-
-#slider li {
-  float: left;
-  position: relative;
-  width: 600px;
-  display: inline-block;
-  height: 200px; }
-
-#slider ul {
-  list-style: none;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 9000px;
-  transition: left 0.5s linear;
-  -moz-transition: left 0.5s linear;
-  -o-transition: left 0.5s linear;
-  -webkit-transition: left 0.5s linear;
-  margin-left: -25px;
-  color: #666; }
-
 /*** Content ***/
 .slider-container {
-  margin: 0 !important;
+  margin: 0;
   padding: 0;
-  min-height: 180px; }
+  max-height: 40px; }
 
 .slider-container p {
   margin: 0;
@@ -431,16 +402,15 @@ ul {
   -webkit-animation-play-state: paused; }
 
 .history-component {
-  min-height: 100vh;
-  max-height: 100vh; }
+  margin-bottom: 32px; }
   .history-component .card-item {
     padding: 6px;
     margin: 0px; }
 
 .history-component-title {
-  font-size: 2em;
+  font-size: 3em;
   color: rgba(40, 50, 40, 0.8);
-  padding: 1% 2% 0 2%; }
+  padding: 32px 0; }
 
 .job-and-education-grid {
   display: grid;
@@ -679,14 +649,13 @@ ul {
   max-width: 75%;
   opacity: 0.25; }
 
-.landing-page-title {
-  font-size: 2.5em; }
-
 .landing-page-text {
+  margin-top: 25%;
   font-size: 2em; }
 
 .landing-page-contents {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-items: center;
   grid-template-columns: 1fr;
@@ -695,7 +664,6 @@ ul {
 
 .cv-card-grid {
   margin: 0 42px;
-  height: 100%;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -874,6 +842,10 @@ ul {
   opacity: 0.8; }
 
 @media screen and (max-width: 800px) {
+  .logo-img {
+    max-width: 58px;
+    margin-top: 12px;
+    margin-left: 16px; }
   .landing-page-role-text,
   .landing-page-text-subtitle {
     padding-top: 16px;
@@ -896,6 +868,7 @@ ul {
   .contact-component {
     height: 91vh; }
     .contact-component .contact-grid {
+      padding-bottom: 42px;
       grid-template-columns: 1fr; }
     .contact-component .contact-section {
       display: none; }
@@ -921,4 +894,6 @@ ul {
       margin: 6px 10px; }
       .history-component .education .history-card-component,
       .history-component .job .history-card-component {
-        margin: 6px 8px; } }
+        margin: 6px 8px; }
+  .footer-component .social-logo {
+    max-width: 48px; } }

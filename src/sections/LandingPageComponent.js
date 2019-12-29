@@ -10,6 +10,33 @@ import HistoryComponent from "./HistoryComponent";
 import TrackVisibility from "react-on-screen";
 
 class LandingPageComponent extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeWord: 0,
+      roles:  ["Software Engineer", "Web Developer", "Musician", "Coffee Enthusiast"],
+      hideAnimation: false
+    }
+  }
+
+  hideAnimation() {
+    if(!this.state.hideAnimation) {
+      setTimeout(() =>
+        this.setState({ hideAnimation: true }, () => this.cycleAnimation()),
+      500);
+    }
+  }
+
+  cycleAnimation() {
+    setTimeout(() =>
+      this.setState(prevState => ({
+        activeWord: (prevState.activeWord + 1) % 4,
+        hideAnimation: false
+      })),
+      300);
+  }
+
   cardOneContents = [
     "Hi there! My name is Mikkel. I'm a Copenhagen-based Software developer holding a BSc in Software Development from the IT University of Copenhagen, Denmark.",
     "I love anything Web, and currently spend my time working as a full stack developer at Forecast, while studying for my MSc."
@@ -57,36 +84,14 @@ class LandingPageComponent extends Component {
                       Copenhagen-based
                     </p>
                   </div>
-                  <div id="slider" className="slider">
-                    <ul>
-                      <li>
-                        <div className="slider-container">
-                          <p className="landing-page-role-text">
-                            Software Engineer
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="slider-container">
-                          <p className="landing-page-role-text">
-                            Web Developer
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="slider-container">
-                          <p className="landing-page-role-text">Musician</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="slider-container">
-                          <p className="landing-page-role-text">
-                            Coffee Enthusiast
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
+                    <div className="slider-container">
+                      <p 
+                        key={this.state.roles[this.state.activeWord]} 
+                        onAnimationEnd={this.hideAnimation.bind(this)} 
+                        className={"landing-page-role-text animated" + (this.state.hideAnimation ? " fadeOutUp" : " fadeInUp")}>
+                        {this.state.roles[this.state.activeWord]}
+                      </p>
+                    </div>
                 </div>
               </div>
             </div>
