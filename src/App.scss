@@ -435,7 +435,7 @@ ul {
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 9000px;
+  // width: 9000px;
   transition: left 0.5s linear;
   -moz-transition: left 0.5s linear;
   -o-transition: left 0.5s linear;
@@ -456,7 +456,6 @@ ul {
 .slider-container p {
   margin: 0;
   line-height: 150%;
-  text-align: justify;
 }
 
 /*** target hooks ****/
@@ -808,7 +807,7 @@ ul {
 }
 
 .landing-page-text-subtitle {
-  text-align: right !important;
+  text-align: right;
   font-size: 3vw;
   font-family: LabelFont;
 }
@@ -1068,6 +1067,25 @@ ul {
 
 // Mobile
 @media screen and (max-width: 800px) {
+  #slider {
+    ul,
+    li,
+    p {
+      max-width: auto;
+      width: 100%;
+    }
+  }
+  .text-and-scrolling-text {
+    display: flex;
+    flex-direction: column;
+    .slider-container {
+      min-height: auto;
+      .landing-page-text-subtitle,
+      p {
+        text-align: center;
+      }
+    }
+  }
   .landing-page-role-text,
   .landing-page-text-subtitle {
     padding-top: 16px;
