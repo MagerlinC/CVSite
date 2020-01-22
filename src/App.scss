@@ -210,11 +210,17 @@ a:hover,
 .footer-component {
   padding: 0;
   width: 100%;
-  height: 10vh;
+  // height: 10vh;
   z-index: 99;
   background-color: $accent_color;
+  .footer-grid {
+    display: grid;
+    padding: 8px 0;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 }
-
 .person-info {
   padding-left: 16px;
   padding-top: 0.2%;
@@ -224,14 +230,6 @@ a:hover,
   text-align: left;
   color: white;
   font-size: 1em;
-}
-
-.footer-grid {
-  display: grid;
-  padding-top: 16px;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 .social-section {
@@ -316,7 +314,9 @@ a:hover,
 .list-card-item-icon {
   align-self: center;
   justify-self: center;
-  max-width: 45%;
+  max-width: 24px;
+  margin: 0 16px;
+  flex-grow: 0;
 }
 
 .list-card-item-text {
@@ -326,8 +326,8 @@ a:hover,
 
 .list-card-item {
   margin: 12px 3px;
-  display: grid;
-  grid-template-columns: 0.2fr 1fr;
+  display: flex;
+  flex-direction: row;
 }
 
 // Landing Page Styling
@@ -356,7 +356,7 @@ a:hover,
   text-align: left;
   color: white;
   font-size: 3vw;
-  margin: 0 0 0 5% !important;
+  margin: 0 0 0 5%;
   padding: 0;
 }
 
@@ -421,7 +421,6 @@ a {
 .slider-container p {
   margin: 0;
   line-height: 150%;
-  text-align: justify;
 }
 
 /*** target hooks ****/
@@ -772,7 +771,7 @@ a {
 }
 
 .landing-page-text-subtitle {
-  text-align: right !important;
+  text-align: right;
   font-size: 3vw;
   font-family: LabelFont;
 }
@@ -781,7 +780,6 @@ a {
   max-width: 75%;
   opacity: 0.25;
 }
-
 
 .landing-page-text {
   margin-top: 25%;
@@ -1030,6 +1028,14 @@ a {
 
 // Mobile
 @media screen and (max-width: 800px) {
+  .text-and-scrolling-text {
+    display: flex;
+    flex-direction: column;
+    p {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
   .logo-img {
     max-width: 58px;
     margin-top: 12px;
@@ -1045,6 +1051,19 @@ a {
   }
   .logo-img-container {
     left: 0;
+  }
+  .cv-card-grid {
+    margin: 0 24px;
+  }
+  .list-card-item {
+    margin: 8px 3px;
+    .list-card-item-icon {
+      max-width: 16px;
+      margin-right: 8px;
+    }
+    .list-card-item-text {
+      font-size: 14px;
+    }
   }
   .cv-card-grid {
     grid-template-columns: 1fr;
@@ -1089,7 +1108,7 @@ a {
   .history-component {
     height: auto;
     min-height: auto;
-    max-height: 200vh;
+    //max-height: 200vh;
     .history-card-grid {
       grid-template-columns: 1fr;
     }
@@ -1109,7 +1128,7 @@ a {
   }
   .footer-component {
     .social-logo {
-      max-width: 48px;
+      max-width: 38px;
     }
   }
 }
