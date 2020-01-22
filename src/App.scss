@@ -356,8 +356,7 @@ a:hover,
   text-align: left;
   color: white;
   font-size: 3vw;
-  margin: 0 0 0 5%;
-  padding: 0;
+  padding-left: 16px;
 }
 
 .scroll-down-section {
@@ -1044,6 +1043,7 @@ a {
   .landing-page-role-text,
   .landing-page-text-subtitle {
     padding-top: 16px;
+    padding-left: 0;
     font-size: 18px;
   }
   .scroll-logo {
