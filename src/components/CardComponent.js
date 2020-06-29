@@ -12,6 +12,7 @@ class CardComponent extends Component {
       showPreview: !!props.previewImg,
       isTouchBased: false,
     };
+    this.togglePreview = this.togglePreview.bind(this);
   }
 
   hidePreview(e) {
@@ -31,10 +32,19 @@ class CardComponent extends Component {
     }));
   }
 
+  onCardTouch(e) {
+    // We already opened with a touch, so ignore re-tries,
+    // by clicking the entire card (to avoid scrolling issues)
+    if (this.state.isTouchBased && !this.state.showPreview) {
+      return;
+    }
+    this.togglePreview(e);
+  }
+
   render() {
     return (
       <div
-        onTouchStart={this.togglePreview.bind(this)}
+        onTouchStart={this.onCardTouch.bind(this)}
         onMouseLeave={
           !this.state.isTouchBased ? this.showPreview.bind(this) : void 0
         }
@@ -43,6 +53,15 @@ class CardComponent extends Component {
         }
       >
         <h1 className="card-title">{this.props.title}</h1>
+        {this.state.isTouchBased && !this.state.showPreview && (
+          <div
+            onClick={this.togglePreview.bind(this)}
+            title="close"
+            className={"touch-close"}
+          >
+            X
+          </div>
+        )}
         {this.state.showPreview ? (
           <div
             onMouseEnter={

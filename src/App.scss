@@ -281,6 +281,12 @@ a:hover,
   &.preview {
     max-height: 30vh;
   }
+  .touch-close {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 14px;
+  }
   max-height: 100vh;
   .preview-content {
     position: relative;
@@ -1102,6 +1108,7 @@ a {
       .card-title {
         font-size: 16px;
       }
+
       .card-item {
         font-size: 14px;
       }
