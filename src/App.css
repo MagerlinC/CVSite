@@ -21,7 +21,7 @@
 
 .parallax {
   /* The image used */
-  background-image: url("./assets/nyhavn.jpg");
+  background-image: url("./assets/nyhavn-min.jpg");
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -702,7 +702,7 @@ a {
     text-align: center; }
   .contact-component .contact-parallax {
     /* The image used */
-    background-image: url("./assets/mermaid.jpg");
+    background-image: url("./assets/mermaid-min.jpg");
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
