@@ -9,7 +9,8 @@ class CardComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showPreview: !!props.previewImg
+      showPreview: !!props.previewImg,
+      isTouchBased: false,
     };
   }
 
@@ -24,8 +25,9 @@ class CardComponent extends Component {
   }
 
   togglePreview(e) {
-    this.setState(prevState => ({
-      showPreview: !prevState.showPreview
+    this.setState((prevState) => ({
+      showPreview: !prevState.showPreview,
+      isTouchBased: true,
     }));
   }
 
@@ -33,7 +35,9 @@ class CardComponent extends Component {
     return (
       <div
         onTouchStart={this.togglePreview.bind(this)}
-        onMouseLeave={this.showPreview.bind(this)}
+        onMouseLeave={
+          !this.state.isTouchBased ? this.showPreview.bind(this) : void 0
+        }
         className={
           "card-component" + (this.state.showPreview ? " preview" : "")
         }
@@ -41,7 +45,9 @@ class CardComponent extends Component {
         <h1 className="card-title">{this.props.title}</h1>
         {this.state.showPreview ? (
           <div
-            onMouseEnter={this.hidePreview.bind(this)}
+            onMouseEnter={
+              !this.state.isTouchBased ? this.hidePreview.bind(this) : void 0
+            }
             className={"card-content preview-content"}
           >
             {this.props.previewImg ? (
@@ -67,7 +73,7 @@ class CardComponent extends Component {
             })}
             {this.props.link && this.props.logo && (
               <div className="card-overlay-button">
-                <a href={this.props.link}>
+                <a title={this.props.btnHover} href={this.props.link}>
                   <img
                     alt="card-logo"
                     src={this.props.logo}
