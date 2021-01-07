@@ -78,21 +78,11 @@ class ContactComponent extends Component {
                 </div>
                 <div className="icon-and-text">
                   <img
-                    alt="phone-icon"
-                    src={PhoneIcon}
-                    className="contact-icon"
-                  />
-                  <p className="contact-text">+45 29 93 11 57</p>
-                </div>
-                <div className="icon-and-text">
-                  <img
                     alt="adress-icon"
                     src={AddressIcon}
                     className="contact-icon"
                   />
-                  <p className="contact-text">
-                    Smyrnavej 13b, 1tv, 2300 København S, Denmark
-                  </p>
+                  <p className="contact-text">Copenhagen, Denmark</p>
                 </div>
               </div>
             </div>
@@ -106,14 +96,14 @@ class ContactComponent extends Component {
     const templateParams = {
       from_name: name,
       from_email: email,
-      message: msg
+      message: msg,
     };
     window.emailjs
       .send("gmail", templateId, templateParams)
-      .then(res => {
+      .then((res) => {
         console.log("Email successfully sent!");
       })
-      .catch(err => console.error("EmailJS Error: ", err));
+      .catch((err) => console.error("EmailJS Error: ", err));
     // Clean state
     this.setState({ email: "", msg: "", name: "" });
   }

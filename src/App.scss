@@ -221,17 +221,14 @@ a:hover,
 }
 
 // Footer Styling
-
 .footer-component {
-  padding: 0;
+  padding: 8px;
   width: 100%;
-  // height: 10vh;
   z-index: 99;
   flex-grow: 0;
   background-color: $accent_color;
   .footer-grid {
     display: grid;
-    padding: 8px 0;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -257,7 +254,7 @@ a:hover,
 }
 
 .social-logo {
-  max-width: 25%;
+  max-width: 18%;
 }
 
 // Card Styling
@@ -852,7 +849,7 @@ a {
 }
 
 .contact-component {
-  height: 90vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   .contact-header {
@@ -1153,11 +1150,6 @@ a {
       .history-card-component {
         margin: 6px 8px;
       }
-    }
-  }
-  .footer-component {
-    .social-logo {
-      max-width: 38px;
     }
   }
 }

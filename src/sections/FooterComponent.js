@@ -17,7 +17,7 @@ class FooterComponent extends Component {
           <div className="person-info">
             <p className="info-item">Mikkel Agerlin Christensen</p>
             <p className="info-item">mikkel_ac@hotmail.com</p>
-            <p className="info-item">+45 29 93 11 57</p>
+            <p className="info-item">Copenhagen, Denmark</p>
           </div>
           <div className="social-section">
             <a href="https://www.linkedin.com/in/mikkel-agerlin-christensen-3a38ba166/">
