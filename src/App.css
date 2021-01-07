@@ -95,6 +95,9 @@ caption {
   vertical-align: baseline;
   background: transparent; }
 
+body {
+  overflow-x: hidden; }
+
 .menu-bar {
   display: grid;
   justify-items: center;
@@ -541,7 +544,9 @@ a {
 /* Wrapper for item list */
 .bm-item-list {
   color: #b8b7ad;
-  padding: 0.8em; }
+  padding: 0.8em;
+  padding-bottom: 0;
+  height: calc(100% - 2em) !important; }
 
 /* Individual item */
 .bm-item {
